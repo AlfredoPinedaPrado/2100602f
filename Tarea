@@ -1,0 +1,140 @@
+package principal;
+public class Principal {
+    public static void main(String[] arg){   
+    
+    Cliente cliente1 = new Cliente("Freddy",19,1000000,"5WR405",51);
+    System.out.println("El nombre del cliente es:");
+    System.out.println(cliente1.getNombre()+" tiene "+cliente1.getEdad()+" anios");
+    System.out.println("Tiene "+cliente1.getDinero()+" pesos "+" Su rfc es "+cliente1.getRfc());
+    System.out.println("Su numero de cliente es: "+cliente1.getnoCliente());
+    System.out.println();
+   
+    Asesor asesor1= new Asesor("Juan",24,1,3500,"Asesor de ventas");
+    System.out.println("El nombre del Asesor es:");
+    System.out.println(asesor1.getNombre()+" tiene "+asesor1.getEdad()+" anios");
+    System.out.println("Su numero de trabajador es: "+asesor1.getnoTrabajador());
+    System.out.println("Su sueldo base es de: "+asesor1.getSueldo()+" Su area es: "+asesor1.getArea());
+    System.out.println();
+    
+    Gerente gerente1= new Gerente("Hitler",70,100,"Evil",15000);
+    System.out.println("El nombre del gerente es:");
+    System.out.println(gerente1.getNombre()+" tiene "+gerente1.getEdad()+" anios");
+    System.out.println("Tiene "+gerente1.getsubAlterno()+" trabajadores");
+    System.out.println("El nombre de la sucursal es "+gerente1.getSucursal()+" su sueldo base es de "+gerente1.getSueldo()+" pesos");
+    }
+}
+
+class Persona{
+    private String nombre;
+    private int edad;
+
+    public Persona(String nombre,int edad){
+        this.nombre=nombre;
+        this.edad=edad;
+    }
+        public String getNombre(){
+            return nombre;
+        }
+        public void setNombre(String nombre){
+            this.nombre=nombre;
+        }
+        public int getEdad(){
+            return edad;
+        }
+        public void setEdad(int edad){
+            this.edad=edad;
+        }
+}
+
+class Cliente extends Persona{
+    private float dinero;
+    private String rfc;
+    private int noCliente;
+
+    public Cliente(String nombre, int edad, float dinero, String rfc, int noCliente){
+        super(nombre, edad);
+        this.dinero=dinero;
+        this.rfc=rfc;
+        this.noCliente=noCliente;
+    }
+        public void setDinero(float dinero){
+            this.dinero=dinero;
+        }
+        public float getDinero(){
+            return dinero;
+        }
+        public void setRfc(String rfc){
+            this.rfc=rfc;
+        }
+        public String getRfc(){
+            return rfc;
+        }
+        public void setnoCliente(int noCliente){
+            this.noCliente=noCliente;
+        }
+        public int getnoCliente(){
+            return noCliente;
+        }
+}
+
+class Asesor extends Persona{
+   private int noTrabajador;
+   private float sueldo;
+   private String area;
+
+   public Asesor(String nombre, int edad, int noTrabajador, float sueldo, String area){
+       super(nombre, edad);
+       this.noTrabajador=noTrabajador;
+       this.sueldo=sueldo;
+       this.area=area;
+   }
+        public void setnoTrabajador(int noTrabajador){
+            this.noTrabajador=noTrabajador;
+        }
+        public int getnoTrabajador(){
+            return noTrabajador;
+        }
+        public void setSueldo(float sueldo){
+            this.sueldo=sueldo;
+        }
+        public float getSueldo(){
+            return sueldo;
+        }
+        public void setArea(String area){
+            this.area=area;
+        }
+        public String getArea(){
+            return area;
+        }
+}
+
+class Gerente extends Persona{
+    private int subAlternos;
+    private String sucursal;
+    private float sueldo;
+    
+    public Gerente(String nombre, int edad, int subAlternos, String sucursal, float sueldo){
+        super(nombre, edad);
+        this.subAlternos=subAlternos;
+        this.sucursal=sucursal;
+        this.sueldo=sueldo;
+    }
+        public void setsubAlternos(int subAlternos){
+            this.subAlternos=subAlternos;
+        }
+        public int getsubAlterno(){
+            return subAlternos;
+        }
+        public void setSucursal(String sucursal){
+            this.sucursal=sucursal;
+        }
+        public String getSucursal(){
+            return sucursal;
+        }
+        public void setSueld(float sueldo){
+            this.sueldo=sueldo;
+        }
+        public float getSueldo(){
+            return sueldo;
+        }
+}
