@@ -22,6 +22,7 @@ class Swing01 {
        window.setVisible(true);
    }
 }
+
 ![image](https://user-images.githubusercontent.com/112669364/193336272-41353049-94ba-442e-a9c4-a8e6c7f3d943.png)
 
 //CODIGO PARA PINTAR LOS OBJETOS
@@ -47,4 +48,5 @@ public class MyCanvas extends JPanel {
        g.fillOval(40, 40, 20, 20);
    }
 }
+
 ![image](https://user-images.githubusercontent.com/112669364/193336328-2e9e2488-c72b-473f-981b-975f9a1ec32b.png)
